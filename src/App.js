@@ -1,4 +1,5 @@
 import React,{useState,useEffect } from 'react'
+import './App.css'
 
 const App = () => {
   const[Data,setData]=useState([{}])
@@ -20,11 +21,11 @@ const App = () => {
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold text-center text-amber-400 mb-8">
+    <div className="container mx-auto p-4 border-l-green-300">
+      <div className="max-w-md mx-auto bg-white p-8 rounded shadow-lg">
+      <h1 className="text-3xl  text-center font-mono font-extrabold mb-8 underline">
         Plant Disease Detection
       </h1>
-      <div className="max-w-md mx-auto bg-white p-8 rounded shadow-lg">
         <p className="text-lg mb-4">
           Plant disease detection using machine learning can be a valuable tool
           for farmers in identifying and managing crop diseases. By analyzing
@@ -35,7 +36,7 @@ const App = () => {
         <p className="text-lg mb-4">
           Our model has been trained to detect the following diseases in plants:
         </p>
-        <ul className="list-disc ml-8">
+        <ul className="list-disc ml-8 font-black animate-pulse">
           <li>Pepper bell - Bacterial spot</li>
           <li>Pepper bell - Healthy</li>
           <li>Potato - Early blight</li>
@@ -52,7 +53,7 @@ const App = () => {
           <div className="mb-4">
             <label
               htmlFor="file"
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-700 bg-yellow-400 text-sm font-bold mb-2"
             >
               Select an Image:
             </label>
@@ -65,10 +66,10 @@ const App = () => {
               className="border border-gray-400 p-2 w-full rounded"
             />
           </div>
-          <div className="text-center">
+          <div className="text-left">
             <button
               type="submit"
-              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+              className="bg-yellow-400 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
             >
               Predict
             </button>
